@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- <script type="text/javascript" src="miniproject1.js"></script>  -->
+    <script>
+        function computeGPA(grades){
+            let sum = 0; //Summing the numeric grade
+            //convert grade to number based on table from the question and add to sum variable
+            for(let i=0; i < grades.length; i++){
+                let grade = grades[i];// one item from array
+
+                    if (grade =="A"){
+                        sum += 100;
+                    }
+                    else if(grade=="B"){
+                        sum+= 80;
+                    }else if(grade=="C"){
+                        sum+= 70;
+                    }
+                
+                }
+                let gpa = sum / grades.length;
+                let result = "";
+                if(gpa == 100){
+                    result = "A";
+                }else if(gpa >=80 && gpa <=99){
+                    result = "B";
+                }else{
+                    result = "C";
+                    } 
+            console.log('Your result is',result);
+            document.write('Your result is ', result);
+            }
+    let myGrades = ["A", "B", "A"];
+    
+    computeGPA(myGrades);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
